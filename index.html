@@ -3,191 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galerie d'art contemporaine présentant des œuvres uniques, allant de peintures minimalistes à des sculptures abstraites. Découvrez nos nouveautés et nos collections exclusives.">
-    <meta name="keywords" content="galerie d'art, peintures, sculptures, art contemporain, œuvres uniques, art moderne">
-    <meta name="author" content="Galerie d'Art Moderne">
     <title>Galerie d'Art - Accueil</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barre de navigation */
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo img {
+            width: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Image d'en-tête */
+        .header-image-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .header-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Sections */
+        section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .produits {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .produit, .avis-item {
+            width: 220px;
+            text-align: center;
+        }
+
+        .produit img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Section Avis Clients */
+        .avis {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .avis-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Cercle */
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header-background" role="banner">
-        <div class="header-content">
-            <div class="logo">
-                <img src="images/logo.png" alt="Logo de la galerie d'art moderne" style="width: 200px; height: auto;">
-            </div>
-            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">
-                ☰
-            </div>
-            <nav id="menu" role="navigation" aria-label="Navigation principale">
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#peintures">Peintures</a></li>
-                    <li><a href="#sculptures">Sculptures</a></li>
-                </ul>
-            </nav>
+    <!-- Barre de Navigation -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de la galerie">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#nouveautes">Nouveautés</a></li>
+                <li><a href="#peintures">Peintures</a></li>
+                <li><a href="#sculptures">Sculptures</a></li>
+                <li><a href="#avis">Avis Clients</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main role="main">
-        <section id="nouveautes" class="section">
-            <h1>Nouveautés</h1>
-            <p class="subtitle">Découvrez les dernières œuvres ajoutées à notre collection</p>
-            <div class="produits">
-                <div class="produit">
-                    <img src="images/P1.webp" alt="Peinture intitulée Géométrie Épure par L.Blanc">
-                    <p>L.Blanc - <em>Géométrie Épure</em></p>
-                    <span>7500€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/P2.webp" alt="Peinture intitulée Élan Fluide par C.Dubois">
-                    <p>C.Dubois - <em>Élan Fluide</em></p>
-                    <span>6800€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/P3.webp" alt="Peinture intitulée Ligne Seule par E.Renaud">
-                    <p>E.Renaud - <em>Ligne Seule</em></p>
-                    <span>4900€</span>
-                </div>
-            </div>
-        </section>
+    <!-- Image d'en-tête -->
+    <div class="header-image-container">
+        <img src="images/noel.png" alt="Image d'en-tête de Noël">
+        <div class="slogan">"Un Noël d'art et d'émotion, unique en son genre."</div>
+    </div>
 
-        <section id="avis" class="section avis-clients">
-            <h2>L'avis de nos clients</h2>
-            <p class="subtitle">Ce que disent nos visiteurs</p>
-            <div class="avis">
-                <div class="avis-item">
-                    <img src="images/C1.webp" alt="Portrait d'un client satisfait - avis positif">
-                    <p>“Une expérience exceptionnelle et un service parfait.”</p>
-                </div>
-                <div class="avis-item">
-                    <img src="images/C2.webp" alt="Portrait d'un client satisfait - avis positif">
-                    <p>“Des œuvres magnifiques qui touchent profondément.”</p>
-                </div>
-                <div class="avis-item">
-                    <img src="images/C3.webp" alt="Portrait d'un client satisfait - avis positif">
-                    <p>“Une découverte incroyable et un service excellent.”</p>
-                </div>
-                <div class="avis-item">
-                    <img src="images/C4.webp" alt="Portrait d'un client satisfait - avis positif">
-                    <p>“Une sculpture magnifique, service impeccable.”</p>
-                </div>
-            </div>
-        </section>
+    <!-- Section Nouveautés -->
+    <section id="nouveautes">
+        <h1>Nouveautés</h1>
+        <div class="produits">
+            <div class="produit"><img src="images/P1.webp" alt="Géométrie Épure"><p><strong>Géométrie Épure</strong></p><span>7 500€</span></div>
+            <div class="produit"><img src="images/P2.webp" alt="Élan Fluide"><p><strong>Élan Fluide</strong></p><span>6 800€</span></div>
+        </div>
+    </section>
 
-        <section id="peintures" class="section">
-            <h2>Nos peintures</h2>
-            <p class="subtitle">Une collection unique de peintures modernes et contemporaines</p>
-            <div class="produits">
-                <div class="produit">
-                    <img src="images/LBLANC_GEO.webp" alt="Peinture intitulée Géométrie Épure par L.Blanc">
-                    <p>L.Blanc - <em>Géométrie Épure</em></p>
-                    <span>7500€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/CDUFRESNE.webp" alt="Peinture intitulée Reflet de l'Infini par C.Dufresne">
-                    <p>C.Dufresne - <em>Reflet de l'Infini</em></p>
-                    <span>3200€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/ERENAUD_LIGNE.webp" alt="Peinture intitulée Ligne Seule par E.Renaud">
-                    <p>E.Renaud - <em>Ligne Seule</em></p>
-                    <span>4900€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/HDELA.webp" alt="Peinture intitulée Éclat du Silence par H.Delacroix">
-                    <p>H.Delacroix - <em>Éclat du Silence</em></p>
-                    <span>4500€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/JRIVEAU.webp" alt="Peinture intitulée Ombres en Mouvement par J.Riveau">
-                    <p>J.Riveau - <em>Ombres en Mouvement</em></p>
-                    <span>4700€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/EDEVEAUX.webp" alt="Peinture intitulée Horizon Détendu par E.Deveaux">
-                    <p>E.Deveaux - <em>Horizon Détendu</em></p>
-                    <span>3900€</span>
-                </div>
-            </div>
-        </section>
+    <!-- Section Avis Clients -->
+    <section id="avis">
+        <h2>Avis de Nos Clients</h2>
+        <div class="avis">
+            <div class="avis-item"><img src="images/C1.webp" alt="Client 1"><p>"Une expérience exceptionnelle."</p></div>
+            <div class="avis-item"><img src="images/C2.webp" alt="Client 2"><p>"Des œuvres magnifiques."</p></div>
+            <div class="avis-item"><img src="images/C3.webp" alt="Client 3"><p>"Service impeccable."</p></div>
+            <div class="avis-item"><img src="images/C4.webp" alt="Client 4"><p>"Un service parfait."</p></div>
+        </div>
+    </section>
 
-        <section id="sculptures" class="section">
-            <h2>Nos sculptures</h2>
-            <p class="subtitle">Des sculptures qui marquent par leur originalité</p>
-            <div class="produits">
-                <div class="produit">
-                    <img src="images/CDUBOIS_ELAN.webp" alt="Sculpture intitulée Vide simple par L.Blanc">
-                    <p>L.Blanc - <em>Vide simple</em></p>
-                    <span>2800€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/CDUFRESNE.webp" alt="Sculpture intitulée Mélodie cordiale par C.Dufresne">
-                    <p>C.Dufresne - <em>Mélodie cordiale</em></p>
-                    <span>3200€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/ERENAUD.webp" alt="Sculpture intitulée Essence de l'Air V1 par E.Renaud">
-                    <p>E.Renaud - <em>Essence de l'Air V1</em></p>
-                    <span>4900€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/ERENAUD2.webp" alt="Sculpture intitulée Essence de l'Air V2 par E.Renaud">
-                    <p>E.Renaud - <em>Essence de l'Air V2</em></p>
-                    <span>4900€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/JRIVEAUTEMPS.webp" alt="Sculpture intitulée Écho du Temps par J.Riveau">
-                    <p>J.Riveau - <em>Écho du Temps</em></p>
-                    <span>4700€</span>
-                </div>
-                <div class="produit">
-                    <img src="images/RYTHMEINFINI.webp" alt="Sculpture intitulée Rythme Infini par E.Deveaux">
-                    <p>E.Deveaux - <em>Rythme Infini</em></p>
-                    <span>3900€</span>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Section Peintures -->
+    <section id="peintures">
+        <h2>Nos Peintures</h2>
+        <div class="produits">
+            <div class="produit"><img src="images/P3.webp" alt="Ligne Seule"><p><strong>Ligne Seule</strong></p><span>4 900€</span></div>
+            <div class="produit"><img src="images/LLARBI.webp" alt="Sérénité de Vie"><p><strong>Sérénité de Vie</strong></p><span>3 500€</span></div>
+            <div class="produit"><img src="images/P2.webp" alt="Élan Fluide"><p><strong>Élan Fluide</strong></p><span>6 800€</span></div>
+        </div>
+    </section>
 
-    <footer role="contentinfo">
+    <!-- Section Sculptures -->
+    <section id="sculptures">
+        <h2>Nos Sculptures</h2>
+        <div class="produits">
+            <div class="produit"><img src="images/RYTHMEINFINI.webp" alt="Rythme Infini"><p><strong>Rythme Infini</strong></p><span>7 000€</span></div>
+            <div class="produit"><img src="images/P3.webp" alt="Silhouette Ondulée"><p><strong>Silhouette Ondulée</strong></p><span>6 300€</span></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <div class="footer-content">
-            <div class="footer-logo" style="margin-top: 50px;">
-                <img src="images/logo.png" alt="Logo de la galerie d'art moderne" style="width: 150px; height: auto;">
-            </div>
-            <div class="footer-info">
-                <div class="footer-section">
-                    <h4>ADRESSE</h4>
-                    <p>12 rue de l'Art Moderne, 06000 Nice, France</p>
-                </div>
-                <div class="footer-section">
-                    <h4>COURRIEL</h4>
-                    <p>contact@nomduartiste.fr</p>
-                </div>
-                <div class="footer-section">
-                    <h4>TÉLÉPHONE</h4>
-                    <p>+33 4 93 00 00 00</p>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>À Propos</h4>
-                <ul>
-                    <li><a href="#">Concept de la galerie</a></li>
-                    <li><a href="#">Conditions Générales de Vente</a></li>
-                    <li><a href="#">Nos Galeries d'Art Nice - Paris - Lyon</a></li>
-                    <li><a href="#">Informations Livraison</a></li>
-                    <li><a href="#">Politique de Retour</a></li>
-                </ul>
-            </div>
+            <div><h4>ADRESSE</h4><p>12 rue de l'Art Moderne, 06000 Nice</p></div>
+            <div><h4>COURRIEL</h4><p>contact@nomduartiste.fr</p></div>
+            <div><h4>TÉLÉPHONE</h4><p>+33 4 93 00 00 00</p></div>
+            <div class="footer-logo"><img src="images/logo.png" alt="Logo de la galerie"></div>
         </div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        }
-    </script>
 
 </body>
 </html>
