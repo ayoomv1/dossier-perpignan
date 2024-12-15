@@ -1,132 +1,87 @@
-/* Global */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Art Moderne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de la galerie">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#nouveautes">Nouveautés</a></li>
+                <li><a href="#peintures">Peintures</a></li>
+                <li><a href="#sculptures">Sculptures</a></li>
+                <li><a href="#avis">Avis Clients</a></li>
+            </ul>
+        </nav>
+    </header>
 
-h2 {
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
+    <!-- Image d'en-tête -->
+    <div class="header-image-container">
+        <img src="images/noel.png" alt="Image de Noël">
+        <div class="slogan">"Un Noël d'art et d'émotion, unique en son genre."</div>
+    </div>
 
-/* Navigation */
-header {
-    background: #111;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
+    <!-- Section Nouveautés -->
+    <section id="nouveautes" class="section">
+        <h2>NOUVEAUTÉS</h2>
+        <div class="produits">
+            <div class="produit">
+                <img src="images/P1.webp" alt="Géométrie Épure">
+                <p>Géométrie Épure</p>
+                <span>7 500€</span>
+            </div>
+            <div class="produit">
+                <img src="images/P2.webp" alt="Élan Fluide">
+                <p>Élan Fluide</p>
+                <span>6 800€</span>
+            </div>
+        </div>
+    </section>
 
-header .logo img {
-    height: 50px;
-}
+    <!-- Section Peintures -->
+    <section id="peintures" class="section">
+        <h2>PEINTURES</h2>
+        <div class="produits">
+            <div class="produit"><img src="images/P3.webp" alt="Ligne Seule"><p>Ligne Seule</p><span>4 900€</span></div>
+            <div class="produit"><img src="images/LLARBI.webp" alt="Sérénité de Vie"><p>Sérénité de Vie</p><span>3 500€</span></div>
+            <div class="produit"><img src="images/P2.webp" alt="Élan Fluide"><p>Élan Fluide</p><span>6 800€</span></div>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
+    <!-- Section Sculptures -->
+    <section id="sculptures" class="section">
+        <h2>SCULPTURES</h2>
+        <div class="produits">
+            <div class="produit"><img src="images/RYTHMEINFINI.webp" alt="Rythme Infini"><p>Rythme Infini</p><span>7 000€</span></div>
+            <div class="produit"><img src="images/P3.webp" alt="Silhouette Ondulée"><p>Silhouette Ondulée</p><span>6 300€</span></div>
+        </div>
+    </section>
 
-nav ul li {
-    margin: 0 15px;
-}
+    <!-- Section Avis Clients -->
+    <section id="avis" class="section">
+        <h2>AVIS CLIENTS</h2>
+        <div class="avis">
+            <div class="avis-item"><img src="images/C1.webp" alt="Client 1"><p>“Une expérience exceptionnelle.”</p></div>
+            <div class="avis-item"><img src="images/C2.webp" alt="Client 2"><p>“Des œuvres magnifiques.”</p></div>
+            <div class="avis-item"><img src="images/C3.webp" alt="Client 3"><p>“Service impeccable.”</p></div>
+        </div>
+    </section>
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Image d'en-tête */
-.header-image-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-}
-
-.header-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Produits */
-.section .produits {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
-}
-
-.produit {
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 15px;
-    transition: transform 0.2s;
-}
-
-.produit img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.produit:hover {
-    transform: scale(1.05);
-}
-
-/* Avis Clients */
-.avis {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.avis-item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.avis-item p {
-    text-align: center;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-logo img {
-    width: 100px;
-}
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div><h4>ADRESSE</h4><p>12 rue de l'Art Moderne, Nice</p></div>
+            <div><h4>COURRIEL</h4><p>contact@nomduartiste.fr</p></div>
+            <div><h4>TÉLÉPHONE</h4><p>+33 4 93 00 00 00</p></div>
+            <div class="footer-logo"><img src="images/logo.png" alt="Logo galerie"></div>
+        </div>
+    </footer>
+</body>
+</html>
